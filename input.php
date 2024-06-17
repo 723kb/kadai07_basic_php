@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <form action="write.php" method="get">
+    <form action="confirm.php" method="get">
         お名前 : <input type="text" name="name" placeholder="お名前">
         Email : <input type="email" name="email" placeholder="Email">
         <p>性別 :
@@ -32,7 +32,7 @@
             <label><input type="checkbox" name="transportation[]" value="自転車">自転車</label><br>
             <label><input type="checkbox" name="transportation[]" value="徒歩">徒歩</label><br>
         </p>
-        <input type="submit" value="送信">
+        <input type="submit" value="確認する">
     </form>
 
 </body>

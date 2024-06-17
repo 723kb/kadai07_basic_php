@@ -79,13 +79,43 @@ echo "</table>";
   <meta charset="utf-8">
   <title>登録データ表示</title>
   <style>
-    #chart-container {
-      width: 500px;
-      /* 幅を調整 */
-      height: 400px;
-      /* 高さを調整 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #content {
+      max-width: 1200px;
       margin: auto;
-      /* 中央寄せ */
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    #chart-container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    canvas {
+      margin: auto;
     }
   </style>
 </head>
