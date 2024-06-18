@@ -37,6 +37,10 @@ $story = !empty($_POST['story']) ? $_POST['story'] : ' - ';
   <meta charset="utf-8">
   <title>確認画面</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- アイコン -->
+  <link rel="apple-touch-icon" href="img/apple-touch-icon-180x180.png" sizes="180x180">
 </head>
 
 <body>

@@ -6,10 +6,11 @@ kadai07_basic_php
 
 - PHPを使ってアンケートフォームのデータを取得することができるアプリ。
 - 取得したデータは表形式で表示＆Chart.jsによってグラフ化。
+- レスポンシブ非対応。
 
 ## ③DEMO
 
-デプロイしている場合はURLを記入（任意）
+https://723kb.sakura.ne.jp/kadai07_basic_php/input.php
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
@@ -30,7 +31,7 @@ kadai07_basic_php
 
 ## ⑦質問・疑問・感想、シェアしたいこと等なんでも
 
-- [感想]jsでやってきた配列のことなどが活かせ、楽しく取り組むことができた。今まで習ってきたことが少しずつ繋がってきたように思う。
+- [感想]jsでやってきた配列のことなどが活かせ、楽しく取り組むことができた。今まで習ってきたことが少しずつ繋がってきたように思う。今回vanilla cssで久しぶりに書いたが、やっぱりcssは難しい。
 - [参考記事]
   - 1. ラジオボタンやチェックボックスの値の取得・出力[https://blanche-toile.com/web/php-form-radio-checkbox] [https://qiita.com/kunrenyouAcount/items/1c66ccee97c33f320fb2]
   - 2. Chart.js[https://www.chartjs.org/docs/latest/]

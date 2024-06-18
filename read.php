@@ -121,6 +121,10 @@ echo "</table>";
   <meta charset="utf-8">
   <title>登録データ表示</title>
   <link rel="stylesheet" href="css/graph.css">
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- アイコン -->
+  <link rel="apple-touch-icon" href="img/apple-touch-icon-180x180.png" sizes="180x180">
 </head>
 
 <body>
@@ -195,14 +199,14 @@ echo "</table>";
               bottom: 20
             }
           },
-          datalabels: {  // なぜか効いていない
+          datalabels: { // なぜか効いていない
             formatter: (value, context) => {
               const total = context.dataset.data.reduce((a, b) => a + b, 0);
               const percentage = ((value / total) * 100).toFixed(0) + '%';
               return `${context.chart.data.labels[context.dataIndex]}: ${value} (${percentage})`;
             },
             display: true,
-            color: '#000', 
+            color: '#000',
             font: {
               weight: 'bold'
             }

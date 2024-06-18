@@ -42,6 +42,10 @@ file_put_contents('data/data.txt',  $data, FILE_APPEND);
     <meta charset="utf-8">
     <title>完了画面</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- アイコン -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon-180x180.png" sizes="180x180">
 </head>
 
 <body>
