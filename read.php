@@ -133,7 +133,7 @@ echo "</table>";
     <canvas id="ageChart"></canvas>
   </div>
   <div class="link">
-    <a href="input.php" class="home_btn bgright"><span>最初に戻る</span></a>
+    <a href="index.php" class="home_btn bgright"><span>最初に戻る</span></a>
   </div>
 
   <!-- Chart.jsの読み込み -->

@@ -10,7 +10,7 @@ kadai07_basic_php
 
 ## ③DEMO
 
-https://723kb.sakura.ne.jp/kadai07_basic_php/input.php
+http://723kb.sakura.ne.jp/kadai07_basic_php/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 

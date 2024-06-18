@@ -54,7 +54,7 @@ file_put_contents('data/data.txt',  $data, FILE_APPEND);
             <h1>完了画面</h1>
             <h2>データが送信されました。</h2>
             <div class="link">
-                <a href="input.php" class="home_btn bgright"><span>最初に戻る</span></a>
+                <a href="index.php" class="home_btn bgright"><span>最初に戻る</span></a>
                 <a href="read.php" class="read_btn bgleft"><span>データをみる</span></a>
             </div>
         </div>
