@@ -27,13 +27,16 @@ http://723kb.sakura.ne.jp/kadai07_basic_php/
 
 - 取得したデータをどう活用するかが難しいと思った。
 - データを一つずつ表のセルに入れていく部分やグラフにデータを渡す部分など、取得したデータを処理する部分が難しかった。
+- formのtextareaで改行があった場合、nl2brにすると確認画面の表示は改行が反映され意図した挙動になったが、データを取得し表として表示させる部分でセル内で改行タグが認識され勝手に改行されてしまった…。セル内での改行ができず、改行タグを空文字に置換することで対応した。
 - グラフの細かな設定（棒グラフの横グリッド線が消えた、％表示できない）が思うようにできなかった。この部分に関してはjsの範疇なので復習が必要。
 
 ## ⑦質問・疑問・感想、シェアしたいこと等なんでも
 
+- [質問]表形式でデータを表示するときの改行タグのうまい処理の仕方を知りたい。
 - [感想]jsでやってきた配列のことなどが活かせ、楽しく取り組むことができた。今まで習ってきたことが少しずつ繋がってきたように思う。今回vanilla cssで久しぶりに書いたが、やっぱりcssは難しい。
 - [参考記事]
   - 1. ラジオボタンやチェックボックスの値の取得・出力[https://blanche-toile.com/web/php-form-radio-checkbox] [https://qiita.com/kunrenyouAcount/items/1c66ccee97c33f320fb2]
   - 2. Chart.js[https://www.chartjs.org/docs/latest/]
   - 3. explode[https://staff.persol-xtech.co.jp/hatalabo/it_engineer/468.html#_3-1-1] [https://x.gd/bzd4g]
   - 4. 連想配列[https://webukatu.com/wordpress/blog/13669/#KeyValue]
+  - 5. 改行の処理[https://www.sejuku.net/blog/23486#index_id5]

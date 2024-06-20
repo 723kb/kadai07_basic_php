@@ -49,9 +49,9 @@ $story = !empty($_POST['story']) ? $_POST['story'] : ' - ';
       <h1>確認画面</h1>
       <form method="post" action="write.php">
         <p class="label_title">お名前</p>
-        <span><?php echo htmlspecialchars($name); ?></span>
+        <span><?php echo htmlspecialchars($name, ENT_QUOTES); ?></span>
         <p class="label_title">メールアドレス</p>
-        <span><?php echo htmlspecialchars($email); ?></span>
+        <span><?php echo htmlspecialchars($email, ENT_QUOTES); ?></span>
         <p class="label_title">性別</p>
         <span><?php echo htmlspecialchars($gender); ?></span>
         <p class="label_title">年齢</p>
@@ -62,18 +62,18 @@ $story = !empty($_POST['story']) ? $_POST['story'] : ' - ';
         <span><?php echo htmlspecialchars($marriage); ?></span>
         <p class="label_title">お子様の有無</p>
         <span><?php echo htmlspecialchars($children); ?></span>
-        <p class="label_title">お子様の年齢</p>
+        <p class="label_title">お子様の年齢（複数選択可）</p>
         <span><?php echo htmlspecialchars($childsAge); ?></span>
         <p class="label_title">普段の移動手段（複数選択可）</p>
         <span><?php echo htmlspecialchars($transportation_str); ?></span>
-        <p class="label_title">移動手段での困りごとはあるか</p>
+        <p class="label_title">普段の移動で困りごとはありますか？ </p>
         <span>ある<?php echo htmlspecialchars($problems); ?></span>
-        <p class="label_title">どんなことに困っていますか？</p>
-        <span><?php echo htmlspecialchars($story); ?></span>
+        <p class="label_title">困りごとがある方は、どんなことに困っていますか？</p>
+        <span><?php echo nl2br(htmlspecialchars($story, ENT_QUOTES)); ?></span>
 
         <!-- 隠しフィールドによる選択肢の送信 -->
-        <input type="hidden" name="name" value=" <?php echo htmlspecialchars($name); ?>">
-        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
+        <input type="hidden" name="name" value=" <?php echo htmlspecialchars($name, ENT_QUOTES); ?>">
+        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES); ?>">
         <input type="hidden" name="gender" value="<?php echo htmlspecialchars($gender); ?>">
         <input type="hidden" name="age" value="<?php echo htmlspecialchars($age); ?>">
         <input type="hidden" name="address" value="<?php echo htmlspecialchars($address); ?>">
@@ -82,7 +82,7 @@ $story = !empty($_POST['story']) ? $_POST['story'] : ' - ';
         <input type="hidden" name="childsAge" value="<?php echo htmlspecialchars($childsAge); ?>">
         <input type="hidden" name="transportation[]" value="<?php echo htmlspecialchars($transportation_str); ?>">
         <input type="hidden" name="problems" value="<?php echo htmlspecialchars($problems); ?>">
-        <input type="hidden" name="story" value="<?php echo htmlspecialchars($story); ?>">
+        <input type="hidden" name="story" value="<?php echo nl2br(htmlspecialchars($story, ENT_QUOTES)); ?>">
 
         <div class="btn_area">
           <input type="button" class="back_btn" value="戻る" onClick="history.back()">

@@ -12,6 +12,10 @@ td {
   text-align: center;
 }
 
+td {
+  white-space: pre-wrap;
+}
+
 th {
   background-color: #f2f2f2;
 }

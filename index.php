@@ -15,19 +15,20 @@
         <div class="container">
             <h1>日常の移動手段に関するアンケート</h1>
             <form action="confirm.php" method="post" class="form">
+                <h2>基本情報</h2>
                 <!-- Q 名前 -->
                 <div class="q_box">
-                    <label for="name" class="label_title">お名前</label>
-                    <input type="text" name="name" id="name" placeholder="ニックネーム可">
+                    <label for="name">お名前 <span class="add_text">(ニックネーム可)</span> <span class="any">任意</span> </label>
+                    <input type="text" name="name" id="name" placeholder="山田 太郎">
                 </div>
                 <!-- Q Email -->
                 <div class="q_box">
-                    <label for="email" class="label_title">Email</label>
-                    <input type="email" name="email" id="email" placeholder="任意">
+                    <label for="email">Email <span class="any">任意</span> </label>
+                    <input type="email" name="email" id="email" placeholder="test@test.com">
                 </div>
                 <!-- Q 性別 -->
                 <div class="q_box">
-                    <span class="label_title">性別</span>
+                    <label for="gender">性別 <span class="required">必須</span> </label>
                     <span>
                         <input type="radio" name="gender" id="gender1" value="男性" required><label for="gender1">男性</label>
                         <input type="radio" name="gender" id="gender2" value="女性" required><label for="gender2">女性</label>
@@ -35,22 +36,22 @@
                 </div>
                 <!-- Q 年齢 -->
                 <div class="q_box">
-                    <label for="age" class="label_title">年齢</label>
-                    <select name="age" id="age">
-                        <option disabled selected>選択してください</option>
-                        <option value="10代" required>10代</option>
-                        <option value="20代" required>20代</option>
-                        <option value="30代" required>30代</option>
-                        <option value="40代" required>40代</option>
-                        <option value="50代" required>50代</option>
-                        <option value="60代以上" required>60代以上</option>
+                    <label for="age" class="label_title">年齢 <span class="required">必須</span> </label>
+                    <select name="age" id="age" required>
+                        <option value="" disabled selected>選択してください</option>
+                        <option value="10代">10代</option>
+                        <option value="20代">20代</option>
+                        <option value="30代">30代</option>
+                        <option value="40代">40代</option>
+                        <option value="50代">50代</option>
+                        <option value="60代以上">60代以上</option>
                     </select>
                 </div>
                 <!-- Q 居住地 -->
                 <div class="q_box">
-                    <label for="address" class="label_title">居住地</label>
-                    <select size="5" name="address" id="address">
-                        <option disabled selected>選択してください</option>
+                    <label for="address">居住地 <span class="required">必須</span> </label>
+                    <select name="address" id="address" required>
+                        <option value="" disabled selected>選択してください</option>
                         <optgroup label="北海道地方">
                             <option value="北海道">北海道</option>
                         </optgroup>
@@ -116,27 +117,28 @@
                         </optgroup>
                     </select>
                 </div>
-                <!-- Q 家族構成 -->
+                <h2>家族構成</h2>
+                <!-- Q 婚姻ステータス -->
                 <div class="q_box">
-                    <span class="label_title">家族構成</span>
+                    <label for="marriage">婚姻ステータス <span class="required">必須</span> </label>
                     <span>
-                        <input type="radio" name="marriage" id="marriage1" value="未婚"><label for="marriage1">未婚</label>
-                        <input type="radio" name="marriage" id="marriage2" value="既婚（離死別含む）"><label for="marriage2">既婚（離死別含む）</label>
+                        <input type="radio" name="marriage" id="marriage1" value="未婚" required><label for="marriage1">未婚</label>
+                        <input type="radio" name="marriage" id="marriage2" value="既婚（離死別含む）" required><label for="marriage2">既婚（離死別含む）</label>
                     </span>
                 </div>
                 <!-- Q 子どもの有無 -->
                 <div class="q_box">
-                    <span class="label_title">お子様の有無</span>
+                    <label for="children">お子様の有無 <span class="required">必須</span> </label>
                     <span>
-                        <input type="radio" name="children" id="children1" value="あり"><label for="children1">あり</label>
-                        <input type="radio" name="children" id="children2" value="なし"><label for="children2">なし</label>
+                        <input type="radio" name="children" id="children1" value="あり" required><label for="children1">あり</label>
+                        <input type="radio" name="children" id="children2" value="なし" required><label for="children2">なし</label>
                     </span>
                 </div>
                 <!-- Q 子どもの年齢 -->
                 <div class="q_box">
-                    <label for="childsAge" class="label_title">お子様の年齢（複数選択可）</label>
+                    <label for="childsAge">お子様の年齢（複数選択可） <span class="any">任意</span> </label>
                     <select multiple name="childsAge" id="childsAge">
-                        <option disabled selected>選択してください</option>
+                        <option value="" disabled selected>選択してください</option>
                         <option value="子どもはいない">子どもはいない</option>
                         <option value="小学校入学前">小学校入学前</option>
                         <option value="小学生">小学生</option>
@@ -146,40 +148,36 @@
                         <option value="社会人">社会人</option>
                     </select>
                 </div>
+                <h2>移動状況</h2>
                 <!-- Q 普段の移動手段 -->
                 <div class="q_box">
-                    <span class="label_title">普段の移動手段（複数選択可）</span>
+                    <label for="transportation">普段の移動手段（複数選択可） <span class="required">必須</span> </label>
                     <span>
-                        <label for="自家用車">
-                            <input type="checkbox" name="transportation[]" value="自家用車" id="自家用車">自家用車
+                        <input type="checkbox" name="transportation[]" value="自家用車" id="自家用車"><label for="自家用車">自家用車
                         </label><br>
-                        <label for="電車">
-                            <input type="checkbox" name="transportation[]" value="電車" id="電車">電車
+                        <input type="checkbox" name="transportation[]" value="電車" id="電車"><label for="電車">電車
                         </label><br>
-                        <label for="バス">
-                            <input type="checkbox" name="transportation[]" value="バス" id="バス">バス
+                        <input type="checkbox" name="transportation[]" value="バス" id="バス"><label for="バス">バス
                         </label><br>
-                        <label for="自転車">
-                            <input type="checkbox" name="transportation[]" value="自転車" id="自転車">自転車
+                        <input type="checkbox" name="transportation[]" value="自転車" id="自転車"><label for="自転車">自転車
                         </label><br>
-                        <label for="徒歩">
-                            <input type="checkbox" name="transportation[]" value="徒歩" id="徒歩">徒歩
+                        <input type="checkbox" name="transportation[]" value="徒歩" id="徒歩"><label for="徒歩">徒歩
                         </label><br>
                     </span>
                     <p id="transportationError" style="color: red; display: none;">最低1つは選択してください</p>
                 </div>
                 <!-- Q 困っていること -->
                 <div class="q_box">
-                    <label for="problems" class="label_title">普段の移動で困りごとはありますか？</label>
+                    <label for="problems">普段の移動で困りごとはありますか？ <span class="required">必須</span> </label>
                     <div>
-                        ない<input type="range" name="problems" id="problems" min="0" max="100">ある
-                        <p>現在の値は<span id="current-value"></span>です</p>
+                        ない (0%) <input type="range" name="problems" id="problems" min="0" max="100" value="0">(100%) ある
+                        <div>現在の値は<span id="current-value"></span>%です</div>
                     </div>
                 </div>
                 <!-- Q 困っている内容 -->
                 <div class="q_box">
-                    <label for="story" class="label_title">困りごとがある方は、どんなことに困っていますか？</label>
-                    <textarea name="story" id="story" rows="5" cols="33"></textarea>
+                    <label for="story">困りごとがある方は、どんなことに困っていますか？ <span class="any">任意</span> </label>
+                    <textarea name="story" id="story" rows="5" cols="33" placeholder="例)階段や坂の移動が大変です&#10;例)雨の日の移動がつらい"></textarea>
                 </div>
                 <div class="btn_area">
                     <input type="submit" class="confirm_btn" value="確認する">
@@ -211,8 +209,8 @@
             setCurrentValue(inputElem.value);
         }
 
+        // チェックボックスに未入力があったときのバリデーション
         const form = document.querySelector('.form'); // フォーム要素を取得
-
         form.addEventListener('submit', function(event) {
             const checkboxes = document.querySelectorAll('input[name="transportation[]"]');
             let checked = false;

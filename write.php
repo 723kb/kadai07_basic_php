@@ -20,6 +20,10 @@ $transportation_str = implode(", ", $transportation);
 // var_dump($_POST['transportation']);
 $problems = isset($_POST['problems']) ? $_POST['problems'] : ' - ';   // ここでは％に直さなくていい ダブってしまう
 $story = !empty($_POST['story']) ? $_POST['story'] : ' - ';
+$story = strip_tags($story); // HTMLタグを除去する
+$story = str_replace(array("\r\n", "\r", "\n"), '  ', $story); // 改行文字を空文字に置換する
+// echo $story; // HTMLタグが除去されたテキストを出力
+
 
 //日本のタイムゾーンに設定
 date_default_timezone_set('Asia/Tokyo');
@@ -52,7 +56,7 @@ file_put_contents('data/data.txt',  $data, FILE_APPEND);
     <div class="wrapper">
         <div class="container">
             <h1>完了画面</h1>
-            <h2>データが送信されました。</h2>
+            <h3>データが送信されました。</h3>
             <div class="link">
                 <a href="index.php" class="home_btn bgright"><span>最初に戻る</span></a>
                 <a href="read.php" class="read_btn bgleft"><span>データをみる</span></a>
