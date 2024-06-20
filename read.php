@@ -93,6 +93,11 @@ foreach ($rows as $row) {
   }
   // スラッシュで各フィールドを分割
   $fields = explode("/", $row);
+  
+  // セル内で改行できるよう変換
+  $fields = str_replace(' ', "<br>", $fields);  // 空文字→<br>
+  $fields = str_replace("<br>","\n" , $fields);  // <br>→改行
+  // var_dump( $fields);
 
   // テーブルの行の開始タグを出力
   echo "<tr>";

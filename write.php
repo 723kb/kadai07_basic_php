@@ -21,7 +21,7 @@ $transportation_str = implode(", ", $transportation);
 $problems = isset($_POST['problems']) ? $_POST['problems'] : ' - ';   // ここでは％に直さなくていい ダブってしまう
 $story = !empty($_POST['story']) ? $_POST['story'] : ' - ';
 $story = strip_tags($story); // HTMLタグを除去する
-$story = str_replace(array("\r\n", "\r", "\n"), '  ', $story); // 改行文字を空文字に置換する
+$story = str_replace(array("\r\n", "\r", "\n"), ' ', $story); // 改行文字を空文字に置換する
 // echo $story; // HTMLタグが除去されたテキストを出力
 
 
